@@ -1,0 +1,181 @@
+
+<style>
+    html {
+      scroll-behavior: smooth;
+    }
+    .nowrapdiv {
+      overflow:shown;
+    }
+    .nowrapdiv p {
+      white-space:nowrap;
+    }
+    .unselectable {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      -khtml-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+
+    p {
+      text-indent: 20px;
+      font-size: 115%;
+      color: #222222;
+      font-family: georgia;
+    }
+
+    #Img1 {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #Img1:hover {
+      opacity: 0.7;
+    }
+
+    #Img2 {
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #Img2:hover {
+      opacity: 0.7;
+    }
+
+    /* The Modal (background) */
+    .modal {
+      display: none;
+      /* Hidden by default */
+      position: fixed;
+      /* Stay in place */
+      z-index: 1;
+      /* Sit on top */
+      padding-top: 100px;
+      /* Location of the box */
+      left: 0;
+      top: 0;
+      width: 100%;
+      /* Full width */
+      height: 100%;
+      /* Full height */
+      overflow: auto;
+      /* Enable scroll if needed */
+      background-color: rgb(0, 0, 0);
+      /* Fallback color */
+      background-color: rgba(0, 0, 0, 0.9);
+      /* Black w/ opacity */
+    }
+
+    /* Modal Content (image) */
+    .modal-content {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+    }
+
+    /* Caption of Modal Image */
+    #caption {
+      margin: auto;
+      display: block;
+      width: 80%;
+      max-width: 700px;
+      text-align: center;
+      color: #ccc;
+      padding: 10px 0;
+      height: 150px;
+    }
+
+    /* Add Animation */
+    .modal-content,
+    #caption {
+      -webkit-animation-name: zoom;
+      -webkit-animation-duration: 0.6s;
+      animation-name: zoom;
+      animation-duration: 0.6s;
+    }
+
+    @-webkit-keyframes zoom {
+      from {
+        -webkit-transform: scale(0)
+      }
+      to {
+        -webkit-transform: scale(1)
+      }
+    }
+
+    @keyframes zoom {
+      from {
+        transform: scale(0)
+      }
+      to {
+        transform: scale(1)
+      }
+    }
+
+    /* The Close Button */
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* 100% Image Width on Smaller Screens */
+    @media only screen and (max-width: 700px) {
+      .modal-content {
+        width: 100%;
+      }
+    }
+    .notificationbox {
+      border-radius: 30px;
+      width: 70%;
+      height: 230px;
+      background-color: #529491;
+      border: 5px solid #39807f;
+      margin: auto;
+      margin-top:5px;
+    }
+    .notificationtitle {
+      color: #444444;
+      text-shadow: 6px 6px 15px #00000099;
+      font-size: 150%;
+      font-weight: 900;
+      text-align: center;
+      margin-top: 8px;
+    }
+</style>
+
+  <div style="margin-top:-38px;margin-left:-8px; margin-right:-8px; margin-bottom:10px; padding:15px; background-color:#709585; border-radius:30px;">
+		<div style="margin-top:30px; height:110px; margin-bottom:0px; padding:10px; border:3px solid #f0ffff; border-radius:30px">
+			<div style="height:105px;margin-bottom:0px; font-size:150%; padding:0px; padding-bottom:-10px; border:2px dotted #f0ffff; border-radius:20px; text-align:center;">
+        <img class="unselectable" src="/assets/cow.png" height="150%" style="margin-top:-45px;">
+			</div>
+		</div>
+	</div>
+	<app-navbar></app-navbar>
+  <div style="align-content:center;">
+    <div class="notificationbox">
+      <p class="notificationtitle">Notification</p>
+    </div>
+  </div>
+<!--
+  <div style="margin-top:5px;text-align:center; border-top:4px dotted #757575;">
+    <p style="color:#707070;font-size:130%;"><b>Welp! It looks like there's nothing here...</b></p>
+    <p style="margin-top:-12px; color:#707070;font-size:130%;"><b>Why don't you add something?</b></p>
+    <img class="unselectable" src="/img/wumpuslonely.png" height="300px" style="max-width:99%; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none;">
+  </div>
+-->
