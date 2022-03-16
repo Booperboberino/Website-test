@@ -1,0 +1,14 @@
+<h2>My Cows</h2>
+<ul class="cows">
+    <a *ngFor="let cow of cows" routerLink="/detail/{{cow.id}}">
+        <li>
+            <span class="badge">{{cow.id}}</span> {{cow.name}}       
+            <app-cow-detail *ngIf="cow == selectedCow"></app-cow-detail> 
+        </li>
+    </a>
+</ul> 
+  <div style="margin-top:5px;text-align:center; border-top:4px dotted #757575;">
+  <p style="color:#707070;font-size:130%;"><b>Well, it looks like there's nothing here...</b></p>
+  <p style="margin-top:-12px; color:#707070;font-size:130%;"><b>Why don't you add something?</b></p>
+  <img class="unselectable" src="/img/wumpuslonely.png" height="300px" style="max-width:99%; user-select: none; -moz-user-select: none; -webkit-user-drag: none; -webkit-user-select: none; -ms-user-select: none;">
+</div>
